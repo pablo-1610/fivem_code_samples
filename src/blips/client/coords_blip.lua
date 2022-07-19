@@ -18,10 +18,10 @@ RegisterCommand("coords_blip", function(_, args)
         return
     end
     local coords <const> = GetEntityCoords(PlayerPedId());
-    local sprite <const> = args[2];
-    local name <const> = args[3];
-    local scale <const> = args[4];
-    local color <const> = args[5];
+    local sprite <const> = args[1];
+    local name <const> = args[2];
+    local scale <const> = args[3];
+    local color <const> = args[4];
     local blips <const> = AddBlipForCoord(coords.x, coords.y, coords.z);
 
     SetBlipSprite(blips, sprite);
