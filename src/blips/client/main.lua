@@ -1,4 +1,4 @@
----@author Wezor
+--- @author Wezor
 --[[
     Used natives:
         - AddBlipForCoord (https://docs.fivem.net/natives/?_0xC6F43D0E)
