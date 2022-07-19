@@ -10,17 +10,14 @@
         - EndTextCommandSetBlipName (https://docs.fivem.net/natives/?_0xBC38B49BCB83BC9B)
 --]]
 
-RegisterCommand("create_blips", function(_, args)
-    if (#args < 5) then
-        print("Usage: create_blips <coords> <sprite> <name> <scale> <color>")
-        return
-    end
 
-    local coords <const> = args[1];
-    local sprite <const> = args[2];
-    local name <const> = args[3];
-    local scale <const> = args[4];
-    local color <const> = args[5];
+RegisterNetEvent("create_blips")
+AddEventHandler("create_blips", function(coords, sprite, name, scale, color)
+    local coords <const> = coords;
+    local sprite <const> = sprite;
+    local name <const> = name;
+    local scale <const> = scale;
+    local color <const> = color;
 
     local blips = AddBlipForCoord(coords.x, coords.y, coords.z);
     SetBlipSprite(blips, sprite);
