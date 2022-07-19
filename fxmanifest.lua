@@ -1,5 +1,6 @@
 fx_version 'cerulean'
 game 'gta5'
+lua54 'yes'
 
 author 'John Doe <j.doe@example.com>'
 description 'This is a showcase script'
