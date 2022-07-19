@@ -11,7 +11,6 @@ local function isBurgerAvailable(burgerName)
             return true
         end
     end
-
     return false
 end
 
@@ -23,7 +22,6 @@ RegisterNetEvent("order_a_burger", function(burgerName)
         TriggerClientEvent("order_a_burger_cb", serverId, 0)
         return
     end
-
     SetTimeout(5000, function()
         TriggerClientEvent("order_a_burger_cb", serverId, 1)
     end)
