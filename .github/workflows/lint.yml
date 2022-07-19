@@ -1,0 +1,11 @@
+name: Lua Check
+on: [ push, pull_request ]
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: FiveM
+        uses: GoatG33k/fivem-lua-lint-action@v1
