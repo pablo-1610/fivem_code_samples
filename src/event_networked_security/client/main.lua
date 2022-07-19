@@ -3,7 +3,7 @@
 --]]
 
 RegisterCommand("flood", function()
-    for i = 1, 5 do
+    for _ = 1, 5 do
         -- Do it 5 times
         TriggerServerEvent("flood_me")
     end
