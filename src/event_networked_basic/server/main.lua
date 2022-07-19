@@ -1,4 +1,4 @@
-RegisterNetEvent("event_networked", function()
+RegisterNetEvent("ping", function()
     local serverId <const> = source
 
     TriggerClientEvent("pong", serverId)
