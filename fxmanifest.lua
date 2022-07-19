@@ -6,7 +6,9 @@ author 'John Doe <j.doe@example.com>'
 description 'This is a showcase script'
 version '1.0.0'
 
-files { "data/*.json" }
+files {
+    'data/*.json'
+}
 
 client_scripts { "src/**/client/*.lua" }
 server_scripts { "src/**/server/*.lua" }
