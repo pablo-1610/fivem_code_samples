@@ -1,6 +1,8 @@
---- @author Wezor
+-- Credits: Wezor
 --[[
     Used natives:
+        - GetEntityCoords (https://docs.fivem.net/natives/?_0x1647F1CB)
+        - PlayerPedId (https://docs.fivem.net/natives/?_0xD80958FC74E988A6)
         - AddBlipForCoord (https://docs.fivem.net/natives/?_0xC6F43D0E)
         - SetBlipSprite (https://docs.fivem.net/natives/?_0xDF735600A4696DAF)
         - SetBlipColour (https://docs.fivem.net/natives/?_0x03D7FB09E75D6B7E)
@@ -10,19 +12,18 @@
         - EndTextCommandSetBlipName (https://docs.fivem.net/natives/?_0xBC38B49BCB83BC9B)
 --]]
 
-RegisterCommand("create_blips", function(_, args)
-    if (#args < 5) then
-        print("Usage: create_blips <coords> <sprite> <name> <scale> <color>")
+RegisterCommand("coords_blip", function(_, args)
+    if (#args < 4) then
+        print("Usage: coords_blip <sprite> <name> <scale> <color>")
         return
     end
-
-    local coords <const> = args[1];
+    local coords <const> = GetEntityCoords(PlayerPedId());
     local sprite <const> = args[2];
     local name <const> = args[3];
     local scale <const> = args[4];
     local color <const> = args[5];
+    local blips <const> = AddBlipForCoord(coords.x, coords.y, coords.z);
 
-    local blips = AddBlipForCoord(coords.x, coords.y, coords.z);
     SetBlipSprite(blips, sprite);
     SetBlipColour(blips, color);
     SetBlipScale(blips, scale);
