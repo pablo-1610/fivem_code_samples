@@ -20,6 +20,6 @@ RegisterCommand("encode_with_spaces", function()
     local tidyTable <const> = json.encode(EXAMPLE_TABLE, {indent = true})
     print("tidy Table:", tidyTable)
 
-    local deserializedTable <const> = json.decode(serializedTable)
+    local deserializedTable <const> = json.decode(tidyTable)
     print("Deserialized example:", deserializedTable.LAX.name)
 end)
