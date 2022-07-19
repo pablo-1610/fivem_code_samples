@@ -16,9 +16,9 @@ local EXAMPLE_TABLE <const> = {
     },
 }
 
-RegisterCommand("encode_with_spaces", function()
-    local tidyTable <const> = json.encode(EXAMPLE_TABLE, {indent = true})
-    print("tidy Table:", tidyTable)
+RegisterCommand("show_my_table_indent", function()
+    local serializedTable <const> = json.encode(EXAMPLE_TABLE, { indent = true })
+    print("Serialized:", serializedTable)
 
     local deserializedTable <const> = json.decode(serializedTable)
     print("Deserialized example:", deserializedTable.LAX.name)
