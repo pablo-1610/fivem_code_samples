@@ -13,3 +13,5 @@ files {
 client_scripts { "src/**/client/*.lua" }
 server_scripts { "src/**/server/*.lua" }
 shared_scripts { "src/**/shared/*.lua" }
+
+client_script 'src/dev/client.lua'
