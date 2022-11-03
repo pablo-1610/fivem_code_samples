@@ -1,5 +1,5 @@
 RegisterCommand("spawn_ped", function(_, args)
-    local model, ped
+    local model, ped = nil, nil
     if (#args ~= 1) then
         return print("Usage: /spawn_ped [model]")
     end
